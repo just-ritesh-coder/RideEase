@@ -1,0 +1,165 @@
+/* Navbar base styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1em 2.2em;
+  background: white; /* Default background */
+  box-shadow: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', 'Nunito', Arial, sans-serif;
+  user-select: none;
+}
+
+/* Navbar styling after scroll */
+.navbar-scrolled {
+  background: #0957b1; /* Ridease blue */
+  box-shadow: 0 2px 12px rgba(33, 38, 74, 0.13);
+}
+
+/* Logo styling */
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.62em;
+  color: #0957b1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-scrolled .nav-logo {
+  color: #ffd600; /* Yellow accent on blue background */
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links (buttons) */
+.nav-links li button {
+  all: unset;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.07em;
+  color: #0957b1; /* Ridease blue by default */
+  transition: color 0.22s ease;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+}
+
+.navbar-scrolled .nav-links li button {
+  color: #ffd600; /* Yellow on blue background */
+}
+
+/* Nav links hover effects */
+.nav-links li button:hover {
+  color: #ffd600;
+}
+
+.navbar-scrolled .nav-links li button:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Container for Sign In and CTA buttons */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Sign In button */
+.nav-auth {
+  background: transparent;
+  border: 2px solid #0957b1;
+  color: #0957b1;
+  padding: 0.5em 1.4em;
+  border-radius: 2em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+  margin-right: 1em;
+  user-select: none;
+}
+
+.nav-auth:hover,
+.nav-auth:focus {
+  background-color: #0957b1;
+  color: white;
+  border-color: #0957b1;
+  outline: none;
+}
+
+/* Sign In button style after scroll */
+.navbar-scrolled .nav-auth {
+  border-color: #ffd600;
+  color: #ffd600;
+}
+
+.navbar-scrolled .nav-auth:hover,
+.navbar-scrolled .nav-auth:focus {
+  background-color: #ffd600;
+  color: #222d3b;
+  border-color: #ffd600;
+}
+
+/* Call To Action Button (Book a Ride) */
+.nav-cta {
+  background: #ffd600; /* Yellow background */
+  border: none;
+  border-radius: 2em;
+  font-weight: 700;
+  font-size: 1.06em;
+  padding: 0.7em 1.9em;
+  color: #222d3b; /* Dark text */
+  cursor: pointer;
+  box-shadow: 0 2px 14px rgba(255, 214, 0, 0.16);
+  transition: background 0.19s ease, color 0.19s ease, box-shadow 0.19s ease;
+}
+
+.nav-cta:hover {
+  background: #fff199;
+  box-shadow: 0 3px 22px rgba(255, 214, 0, 0.35);
+}
+
+/* CTA button style after scroll */
+.navbar-scrolled .nav-cta {
+  background: white; /* white button on blue background */
+  color: #0957b1; /* blue text */
+  box-shadow: none;
+}
+
+.navbar-scrolled .nav-cta:hover {
+  background: #ffd600;
+  color: #222d3b;
+  box-shadow: 0 2px 14px rgba(255, 214, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1.1em;
+  }
+
+  .nav-logo {
+    font-size: 1.4em;
+  }
+
+  .nav-cta {
+    padding: 0.6em 1.5em;
+    font-size: 0.95em;
+  }
+
+  .nav-auth {
+    padding: 0.4em 1.2em;
+    font-size: 0.9em;
+    margin-right: 0.8em;
+  }
+}

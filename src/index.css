@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* React Modal default overlay, override for signin */
+.signin-overlay {
+  background-color: rgba(0, 0, 0, 0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  transition: opacity 200ms ease-in-out;
+  opacity: 1;
+}
+
+/* Modal box itself */
+.signin-modal {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  position: relative;
+}
+
+/* Add responsiveness */
+@media (max-width: 480px) {
+  .signin-section {
+    width: 90vw;
+    padding: 1.4em 1.8em;
+  }
+}

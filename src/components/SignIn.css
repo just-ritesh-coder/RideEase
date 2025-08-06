@@ -1,0 +1,121 @@
+.signin-section {
+  background: white;
+  padding: 2em 2.4em;
+  border-radius: 1em;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 3px 25px rgb(9 87 177 / 0.25);
+  font-family: 'Poppins', sans-serif;
+  color: #0957b1;
+  outline: none;
+}
+
+.signin-close {
+  position: absolute;
+  top: 0.8em;
+  right: 1em;
+  font-size: 2.2em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0957b1;
+  transition: color 0.22s;
+  user-select: none;
+}
+
+.signin-close:hover,
+.signin-close:focus {
+  color: #ffd600;
+  outline: none;
+}
+
+.signin-container {
+  text-align: center;
+}
+
+.signin-title {
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.signin-label {
+  font-weight: 600;
+  font-size: 1em;
+  text-align: left;
+}
+
+.signin-input {
+  padding: 0.75em 1.1em;
+  font-size: 1.05em;
+  border-radius: 0.7em;
+  border: 1.5px solid #b1c1e3;
+  background: linear-gradient(90deg, #fff 85%, #e3f0fd 100%);
+  font-family: inherit;
+  transition: border-color 0.19s;
+}
+
+.signin-input:focus {
+  border-color: #ffd600;
+  outline: none;
+}
+
+.signin-error {
+  color: #bb2d3b;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin: -0.5em 0 0.7em 0;
+  text-align: left;
+}
+
+.signin-btn {
+  margin-top: 1em;
+  font-weight: 700;
+  font-size: 1.15em;
+  padding: 0.9em;
+  border-radius: 2em;
+  border: none;
+  background: #ffd600;
+  color: #222d3b;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #ffd60063;
+  transition: background 0.22s, transform 0.13s;
+}
+
+.signin-btn:hover,
+.signin-btn:focus {
+  background: #fff199;
+  outline: none;
+  transform: scale(1.05);
+}
+
+.signin-success {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.signin-success button {
+  margin-top: 1.5em;
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  border: none;
+  background: #ffd600;
+  color: #222d3b;
+  font-weight: 700;
+  font-size: 1.06em;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #ffd60063;
+  transition: background 0.22s, transform 0.13s;
+}
+
+.signin-success button:hover {
+  background: #fff199;
+  transform: scale(1.05);
+}

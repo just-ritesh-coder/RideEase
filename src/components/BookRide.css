@@ -1,0 +1,170 @@
+.bookride-bg {
+  background: linear-gradient(120deg, #e3f0fd 60%, #ffd60010 100%);
+  padding: 60px 0 40px 0;
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.bookride-container {
+  position: relative;
+  z-index: 2;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.bookride-title {
+  text-align: center;
+  color: #0957b1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+.bookride-card {
+  background: #fff;
+  border-radius: 1.2em;
+  box-shadow: 0 3.5px 20px #0957b141;
+  padding: 1.4em 1.8em 1.8em 1.8em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bookride-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.br-label {
+  font-weight: 600;
+  color: #155799;
+  font-size: 1em;
+  margin-bottom: 0.12em;
+  display: flex;
+  align-items: center;
+}
+
+.br-icon {
+  margin-right: 0.4em;
+  font-size: 1.2em;
+}
+
+.bookride-form input,
+.bookride-form select,
+.bookride-form textarea {
+  font-family: inherit;
+  font-size: 1.06em;
+  padding: 0.75em 1.1em;
+  border: 1.5px solid #b1c1e3;
+  border-radius: 0.8em;
+  background: linear-gradient(90deg, #fff 85%, #e3f0fd 100%);
+  margin-bottom: 0.4em;
+  transition: border-color 0.19s;
+}
+
+.bookride-form input:focus,
+.bookride-form select:focus,
+.bookride-form textarea:focus {
+  border: 2px solid #ffd600;
+  outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.8em 1.6em;
+  font-weight: 700;
+  font-size: 1.07em;
+  border-radius: 2em;
+  border: none;
+  margin-top: 0.3em;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.13s;
+}
+
+.btn-primary {
+  background: #ffd600;
+  color: #222d3b;
+  box-shadow: 0 2px 12px #ffd60031;
+}
+
+.btn-primary:hover {
+  background: #fff199;
+  transform: scale(1.06);
+}
+
+.btn-secondary {
+  background: #dbe7f6;
+  color: #1355ae;
+  margin-right: 1em;
+}
+
+.btn-secondary:hover {
+  background: #b1d3fa;
+}
+
+.br-cta-row {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.br-next,
+.br-submit {
+  width: 60%;
+  align-self: end;
+}
+
+.bookride-success {
+  text-align: center;
+  color: #1355ae;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.br-check {
+  font-size: 2.6em;
+  margin-bottom: 0.5em;
+}
+
+/* Map background visible at full opacity, no blur or fade */
+.bookride-map-mock {
+  position: absolute;
+  top: 20px;
+  left: 48%;
+  z-index: 0;
+  width: 55vw;
+  max-width: 640px;
+  pointer-events: none;
+  /* Removed opacity & filter for full color visibility */
+  height: 330px;
+  overflow: hidden;
+  display: none;
+}
+
+.bookride-map-mock img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .bookride-map-mock {
+    display: block;
+  }
+  .bookride-container {
+    margin-right: 320px;
+  }
+}
+
+@media (max-width: 760px) {
+  .bookride-container {
+    margin: 0 auto;
+  }
+  .bookride-title {
+    font-size: 1.3em;
+  }
+}
