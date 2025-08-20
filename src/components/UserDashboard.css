@@ -1,0 +1,115 @@
+.dashboard-section {
+  background: #f6faff;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 1em;
+  padding: 1.5rem;
+  box-shadow: 0 3px 14px rgba(9, 87, 177, 0.15);
+  text-align: center;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px #0957b14d;
+}
+
+.profile-view h2 {
+  margin-bottom: 0.3rem;
+  color: #0957b1;
+}
+
+.profile-view p {
+  margin: 0.2rem 0;
+  color: #555;
+}
+
+.profile-edit input {
+  width: 100%;
+  padding: 0.6em;
+  margin-bottom: 0.8rem;
+  border: 1.5px solid #b1c1e3;
+  border-radius: 0.5em;
+}
+
+.btn-primary {
+  background: #ffd600;
+  color: #222d3b;
+  padding: 0.6em 1.4em;
+  border: none;
+  font-weight: 600;
+  border-radius: 2em;
+  cursor: pointer;
+  margin: 0.4em;
+}
+
+.btn-primary:hover {
+  background: #fff199;
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid #0957b1;
+  color: #0957b1;
+  padding: 0.6em 1.4em;
+  font-weight: 600;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #e3f0fd;
+}
+
+.rides-card {
+  background: white;
+  border-radius: 1em;
+  padding: 1.5rem;
+  box-shadow: 0 3px 14px rgba(9, 87, 177, 0.15);
+}
+
+.rides-card h3 {
+  margin-bottom: 1rem;
+  color: #0957b1;
+}
+
+.rides-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rides-table th, .rides-table td {
+  padding: 0.7em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.rides-table tr.completed td {
+  color: #28a745;
+}
+
+.rides-table tr.cancelled td {
+  color: #bb2d3b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,3 +1,10 @@
+/* Universal box-sizing for consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .bookride-bg {
   background: linear-gradient(120deg, #e3f0fd 60%, #ffd60010 100%);
   padding: 60px 0 40px 0;
@@ -11,6 +18,7 @@
   z-index: 2;
   max-width: 430px;
   margin: 0 auto;
+  background: transparent;
 }
 
 .bookride-title {
@@ -19,6 +27,8 @@
   font-family: 'Poppins', sans-serif;
   font-size: 1.8em;
   margin-bottom: 1em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .bookride-card {
@@ -28,6 +38,11 @@
   padding: 1.4em 1.8em 1.8em 1.8em;
   margin: 0 auto;
   position: relative;
+  transition: box-shadow 0.18s;
+}
+
+.bookride-card:focus-within {
+  box-shadow: 0 6px 28px #0957b155;
 }
 
 .bookride-form {
@@ -60,14 +75,26 @@
   border-radius: 0.8em;
   background: linear-gradient(90deg, #fff 85%, #e3f0fd 100%);
   margin-bottom: 0.4em;
-  transition: border-color 0.19s;
+  transition: border-color 0.19s, box-shadow 0.18s;
+  color: #233c68;
+  outline: none;
+  width: 100%;
 }
 
 .bookride-form input:focus,
 .bookride-form select:focus,
 .bookride-form textarea:focus {
   border: 2px solid #ffd600;
-  outline: none;
+  box-shadow: 0 2px 12px #ffd60033;
+  background: #fdfbe7;
+}
+
+.bookride-form input::placeholder,
+.bookride-form textarea::placeholder {
+  color: #8ea1cd;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  opacity: 1;
 }
 
 .btn-primary,
@@ -79,7 +106,7 @@
   border: none;
   margin-top: 0.3em;
   cursor: pointer;
-  transition: background 0.15s, transform 0.13s;
+  transition: background 0.15s, transform 0.13s, box-shadow 0.13s;
 }
 
 .btn-primary {
@@ -88,9 +115,11 @@
   box-shadow: 0 2px 12px #ffd60031;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background: #fff199;
   transform: scale(1.06);
+  outline: 2px solid #ffd600;
 }
 
 .btn-secondary {
@@ -99,8 +128,10 @@
   margin-right: 1em;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
   background: #b1d3fa;
+  outline: 2px solid #b1c1e3;
 }
 
 .br-cta-row {
@@ -139,7 +170,6 @@
   width: 55vw;
   max-width: 640px;
   pointer-events: none;
-  /* Removed opacity & filter for full color visibility */
   height: 330px;
   overflow: hidden;
   display: none;
@@ -166,5 +196,22 @@
   }
   .bookride-title {
     font-size: 1.3em;
+  }
+  .bookride-card {
+    padding: 1em 0.7em 1.2em 0.7em;
+  }
+}
+
+/* Extra mobile tweaks */
+@media (max-width: 480px) {
+  .bookride-bg {
+    padding: 30px 0 20px 0;
+    min-height: 260px;
+  }
+  .bookride-card {
+    padding: 0.7em 0.3em 1em 0.3em;
+  }
+  .bookride-title {
+    font-size: 1.1em;
   }
 }
